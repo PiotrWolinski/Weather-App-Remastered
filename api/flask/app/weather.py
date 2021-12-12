@@ -10,8 +10,8 @@ def get_weather_now():
     """API endpoint for fetching weather data from given city.
 
     City can be passed in the qurey params in two different ways:
-    - city -- name of the city
-    - city_id -- city ID from the openweathermap list
+    - city    - name of the city
+    - city_id - city ID from the openweathermap list
     
     Return: data JSON containing flag providing information if
     the request was successful and informations about the weather 
