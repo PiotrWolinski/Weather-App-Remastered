@@ -64,6 +64,6 @@ def get_weather_now():
     if ow_response.status_code == 200:
         data['weather'] = ow_response.json()
     else:
-        print(f'OpenWeatherMap API response code = {ow_response.status_code}')
+        app.logger.warning(f'OpenWeatherMap API response code = {ow_response.status_code}')
 
     return data
