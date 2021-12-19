@@ -25,7 +25,7 @@ def get_weather_now():
     Example successful response:
     {
         success: True,
-        weather: { 
+        data: { 
             some info about weather...
         }
     }
@@ -33,7 +33,7 @@ def get_weather_now():
     Example unsuccessful respose:
     {
         success: False,
-        weather: {}
+        data: {}
     }
 
     """
@@ -62,7 +62,7 @@ def get_weather_now():
     }
 
     if ow_response.status_code == 200:
-        data['weather'] = ow_response.json()
+        data['data'] = ow_response.json()
     else:
         app.logger.warning(f'OpenWeatherMap API response code = {ow_response.status_code}')
 
