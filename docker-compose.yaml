@@ -3,13 +3,13 @@ version: '3.9'
 services:
   api:
     build: "api/"
-    restart: "always"
+    restart: "on-failure"
     expose: 
       - "8080"
 
   proxy:
     build: "proxy/"
-    restart: "always"
+    restart: "on-failure"
     expose: 
       - "80"
     ports: 
